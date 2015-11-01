@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -eu
-which hg ant
-hg clone https://code.google.com/p/xtf-cpf/
+which git ant
+git clone https://github.com/snac-pilot/xtf-cpf.git
 cd xtf-cpf
-hg checkout xtf-cpf
+git checkout xtf-cpf
 cd WEB-INF
 ant
 cd ../..
-hg clone https://code.google.com/p/xtf-cpf/ xtf-extract
+git clone https://github.com/snac-pilot/xtf-cpf.git xtf-extract
 cd xtf-extract
-hg checkout xtf-cfp-unmerged  ## TYPO!! TPYO
+git checkout xtf-cfp-unmerged  ## TYPO!! TPYO
 cd WEB-INF
 ant
